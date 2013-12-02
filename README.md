@@ -1,51 +1,32 @@
-# Introducing FitVids.js
-A lightweight, easy-to-use jQuery plugin for fluid width video embeds.
+# Angular FitVids
 
-FitVids automates [the Intrinsic Ratio Method by Thierry Koblentz](http://www.alistapart.com/articles/creating-intrinsic-ratios-for-video/) to achieve fluid width videos in your responsive web design.
+This project is an [AngularJS](http://angularjs.org) port of [FitVids](https://github.com/davatron5000/FitVids.js) from [@davatron5000](https://twitter.com/davatron5000) and [@chriscoyier](https://twitter.com/chriscoyier). This exists to allow AngularJS users access to responsive video support through FitVids without requiring jQuery.
 
-## How Do I Use It?
-Include jQuery 1.7+ and FitVids.js in your layout and target your videos container with `fitVids()`.
+# Browser Support
+
+Has been loosely tests on the latest versions of Chrome and Firefox as well IE8+. Browsers must support `document.querySelectorAll` for it to work.
+
+# Usage
+
+For overall usage please see FitVids. Works with AngularJS v1.2.0 and above.
 
 ```html
-<script src="path/to/jquery.min.js"></script>
-<script src="path/to/jquery.fitvids.js"></script>
-<script>
-  $(document).ready(function(){
-    // Target your .container, .wrapper, .post, etc.
-    $("#thing-with-videos").fitVids();
-  });
+<script src="/path/to/angular.min.js"></script>
+<script src="path/to/angular.fitvids.js"></script>
+<script type="text/javascript">
+    var App = angular.module('App', ['fitVids']);
 </script>
+
+<!-- Video in your <body> -->
+<div fit-vids>
+    <iframe width="425" height="349" src="http://www.youtube.com/embed/FKWwdQu6_ok" frameborder="0" allowfullscreen></iframe>
+</div>
 ```
 
-This will wrap each video in a `div.fluid-width-video-wrapper` and apply the necessary CSS. After the initial Javascript call, it's all percentage-based CSS magic.
+Custom selector support exists like so
 
-## Currently Supported Players
-<table>
-<tr><td>YouTube</td><td>Y</td></tr>
-<tr><td>Vimeo</td><td>Y</td></tr>
-<tr><td>Blip.tv</td><td>Y</td></tr>
-<tr><td>Viddler</td><td>Y</td></tr>
-<tr><td>Kickstarter</td><td> Y</td></tr>
-</table>
-
-## Add Your Own Video Vendor
-Have a custom video player? We now have a `customSelector` option where you can add your own specific video vendor selector (_mileage may vary depending on vendor and fluidity of player_):
-
-```javascript
-  $("#thing-with-videos").fitVids({ customSelector: "iframe[src^='http://mycoolvideosite.com'], iframe[src^='http://myviiids.com']"});
-  // Selectors are comma separated, just like CSS
+```html
+<div fit-vids custom-selector="iframe[src^='http://socialcam.com']">
+    <iframe width="520px" height="391px" src="http://socialcam.com/videos/XRMP3Y5t/embed?utm_campaign=web&utm_source=embed" frameborder="0" allowfullscreen></iframe>
+</div>
 ```
-
-_Note:_ This will be the quickest way to add your own custom vendor as well as test your player's compatibility with FitVids.
-
-## Changelog
-* _08.16.13 - v1.0.3 - 2.779k_
-  * Optionally works with Zepto
-* _09.02.11 - v1.0.2 - 2.376kb_
-  * Added `customSelector` option
-* _09.02.11 - v1.0.0 - 2.135kb_
-	* Initial release
-	* Vimeo,YouTube, Blip.tv, Viddler, Kickstarter
-
-## Credits
-@ChrisCoyier, @davatron5000, @TrentWalton, @raygunray

@@ -1,13 +1,13 @@
 {
-  "name": "jquery.fitvids",
-  "version": "1.0.2",
-  "main": "./jquery.fitvids.js",
+  "name": "angular.fitvids",
+  "version": "0.1.0",
+  "main": "./angular.fitvids.js",
   "ignore": [
     "**/.*",
     "node_modules",
     "components"
   ],
   "dependencies": {
-    "jquery": ">= 1.7.0"
+    "angular": ">= 1.2.0"
   }
 }
