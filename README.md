@@ -12,7 +12,7 @@ For overall usage please see FitVids. Works with AngularJS v1.2.0 and above.
 
 ```html
 <script src="/path/to/angular.min.js"></script>
-<script src="path/to/angular.fitvids.js"></script>
+<script src="path/to/angular-fitvids.js"></script>
 <script type="text/javascript">
     var App = angular.module('App', ['fitVids']);
 </script>

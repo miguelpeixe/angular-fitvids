@@ -1,7 +1,7 @@
 {
-  "name": "angular.fitvids",
+  "name": "angular-fitvids",
   "version": "0.1.0",
-  "main": "./angular.fitvids.js",
+  "main": "./angular-fitvids.js",
   "ignore": [
     "**/.*",
     "node_modules",
